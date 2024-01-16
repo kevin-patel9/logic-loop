@@ -1,0 +1,67 @@
+.cardContainer{
+    background: #3d556f;
+    padding: 1rem 1rem;
+}
+
+.headerText{
+    padding: 20px;
+    margin: 0;
+    color: white;
+}
+
+.allUserCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.userCardBox{
+    width: 24rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background: white;
+}
+
+.userDescription{
+    padding: 12px;
+    font-style: italic;
+    color: #5D5E60;
+}
+
+.userCardBox div p {
+    margin: 6px;
+}
+
+.userCardBox div h2 {
+    margin: 6px;
+    color: white;
+}
+
+.userHeaderBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2px;
+    padding-left: 9rem;
+    position: relative;
+}
+
+.userHeaderBox img{
+    position: absolute;
+    top: 26px;
+    left: 30px;
+    height: 80px;
+    width: 80px;
+    background: white;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.withIconContainer{
+    color: #575C60;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}

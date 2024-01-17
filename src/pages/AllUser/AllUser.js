@@ -7,21 +7,28 @@ import { getTime } from "../../components/getDate";
 
 const AllUser = () => {
 const [userData, setUserData] = useState([]);
+const [loader, setLoader] = useState(false);
 
 const getData = async () => {
+    setLoader(true);
+    
     const data = await axios.get("https://dummyjson.com/users");
     setUserData(data?.data?.users);
+
+    setLoader(false);
 };
 
 useEffect(() => {
     getData();
 }, []);
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleCardClick = (userId) => {
         navigate(`/user/${userId}`);
     };
+
+    if (loader) return <h2 style={{ textAlign: "center" }}>Loading....</h2>;
 
 return (
     <div className="cardContainer">

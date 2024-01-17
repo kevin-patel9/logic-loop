@@ -6,12 +6,15 @@ import { getTime } from "../../components/getDate";
 
 const SingleCard = () => {
   const [data, setData] = useState({});
+  const [loader, setLoader] = useState(false);
   const { id } = useParams(); // get id from url
 
   const getSingleData = async () => {
+    setLoader(true);
     const userData = await axios.get("https://dummyjson.com/users");
     // indexing start from 0 and id starts from 1
     setData(userData?.data?.users[id - 1]);
+    setLoader(false);
   };
 
   useEffect(() => {
@@ -35,8 +38,11 @@ const SingleCard = () => {
     fontWeight: "bold",
   };
 
+  if (loader)
+    return <h2 style={{ textAlign: "center" }}>Loading....</h2>;
+
   // if user tries to access id that does not exist
-  if (!data) 
+  if (!loader && !data) 
     return <h2 style={{ textAlign: "center" }}>User with given id does not exist</h2>;
 
   return (

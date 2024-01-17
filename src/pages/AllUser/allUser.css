@@ -21,6 +21,7 @@
     width: 24rem;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
     background: white;
 }
 
@@ -35,7 +36,7 @@
 }
 
 .userCardBox div h2 {
-    margin: 6px;
+    margin: 9px;
     color: white;
 }
 
@@ -50,7 +51,7 @@
 
 .userHeaderBox img{
     position: absolute;
-    top: 26px;
+    top: 30px;
     left: 30px;
     height: 80px;
     width: 80px;

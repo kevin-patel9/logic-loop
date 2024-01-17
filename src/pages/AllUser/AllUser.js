@@ -63,7 +63,7 @@ return (
                     <div className="userDescription">
                         <p>{item.userAgent}</p>
                     </div>
-                    <div style={{ background: "#D8DCDF", padding: "12px" }}>
+                    <div style={{ background: "#D8DCDF", padding: "24px" }}>
                         <div className="withIconContainer">
                             <FaPhone size={14} />
                             <p>{item.phone}</p>
